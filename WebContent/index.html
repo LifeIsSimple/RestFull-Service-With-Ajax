@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>mini Project </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="Style/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!-- awesome core CSS -->
+    <link href="Style/fonts/css/font-awesome.min.css" rel="stylesheet">
+    <!-- bootstrapValidator plugins -->
+    <link href="Style/css/Validator/css/bootstrapValidator.css" rel="stylesheet">
+    <!-- menu plugins -->
+    <link href="Style/css/menu/menu.min.css" rel="stylesheet">
+    <!-- dataTables plugins -->
+    <link href="Style/css/datatables/tools/css/dataTables.tableTools.css" rel="stylesheet">
+    <!-- jquery confirm plugin -->
+	<link href="Style/css/jquery confirm/jquery-confirm.min.css" rel="stylesheet">
+</head>
+
+
+<body class="nav-md">
+
+    <div class="container body">
+
+
+        <div class="main_container">
+
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+
+                    <div class="navbar nav_title" style="border: 0;">
+                        <a href="#" class="site_title"><i class="fa fa-graduation-cap"></i> <span>ISET</span></a>
+                    </div>
+                    <div class="clearfix"></div>
+
+
+                    
+
+                    <br />
+                    <br>
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+
+                        <div class="menu_section">
+                            <h3><i class="fa fa-cog"></i> Paramètre </h3>
+                            <ul class="nav side-menu">
+                               <li><a id="AcceuilMenu" href="#/acceuil"><i class="fa fa-tachometer"></i> Acceuil </a>
+                                	
+                                </li>
+
+                                <li><a href="#/Etablisment"><i class="fa fa-university"></i> Gestion Etablissement <span class="fa fa-chevron-down"></span> </a>
+                                	<ul class="nav child_menu" style="display: none">
+                                        <li id="ajouterEtab"><a href="#/ajouterEtab">Ajouter un Etablisment</a>
+                                        </li>
+                                        <li><a id="AfficherEtab" href="#/AfficherEtab">Afficher le liste des Etablisments</a>
+                                        </li>
+                                       
+                                    </ul>
+                                </li>
+
+                                <li><a href="#/Department"><i class="fa fa-building"></i> Gestion de Department <span class="fa fa-chevron-down"></span> </a>
+                                   <ul class="nav child_menu" style="display: none">
+                                        <li><a id="ajouterDep" href="#/ajouterDep">Ajouter un Department</a>
+                                        </li>
+                                        <li><a id="AfficherDep" href="#/AfficherDep">Afficher le liste des Department</a>
+                                        </li>
+                                       
+                                    </ul>
+                                </li>
+                                <li><a href="#/Service"><i class="fa fa-tasks"></i> Gestion de Service <span class="fa fa-chevron-down"></span> </a>
+                                    <ul class="nav child_menu" style="display: none">
+                                        <li><a id="ajouterServ" href="#/ajouterServ">Ajouter un Service</a>
+                                        </li>
+                                        <li><a id="AfficherServ" href="#/AfficherServ">Afficher le liste des Service</a>
+                                        </li>
+                                       
+                                    </ul>
+                                </li>
+                            </ul> 
+                        </div>
+                          <div class="menu_section">
+                            <h3> <i class="fa fa-sitemap"></i> Gestion de local</h3>
+                            <ul class="nav side-menu">
+                                <li><a href="#/Salles"><i class="fa fa-home"></i> Gestion de Salles <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu" style="display: none">
+                                      
+                                        <li><a id="ajouterSalles" href="#/ajouterSalles">Ajouter un Salles</a>
+                                        </li>
+                                        <li><a id="AfficherSalles" href="#/ajouterSalles">Afficher le liste des Salles</a>
+                                        </li>
+                                       
+                                    </ul>
+                                  </li>
+                                 <li><a href="#/Labos"><i class="fa fa-hospital-o"></i> Gestion de Labos <span class="fa fa-chevron-down"></span> </a>
+                                    <ul class="nav child_menu" style="display: none">
+		                                        <li><a id="ajouterLabos" href="#/ajouterLabos">Ajouter un Labos</a>
+		                                        </li>
+		                                        <li><a id="AfficherLabos" href="#/AfficherLabos">Afficher le liste des Labos</a>
+		                                        </li>
+		                                       
+		                                    </ul>
+                                  </li>
+                                 <li><a href="#/Bureaux"><i class="glyphicon glyphicon-home"></i>   Gestion de Bureaux <span class="fa fa-chevron-down"></span> </a>
+                                    <ul class="nav child_menu" style="display: none">
+                                        <li><a id="ajouterBureaux" href="#/ajouterBureaux">Ajouter un Bureaux</a>
+                                        </li>
+                                        <li><a id="AfficherBureaux" href="#/ajouterBureaux">Afficher le liste des Bureaux</a>
+                                        </li>
+                                       
+                                    </ul>
+                                 </li>
+                             </ul>
+                               
+                        </div>
+                        
+
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="top_nav">
+
+                <div class="nav_menu">
+                    <nav class="" role="navigation">
+                        <div class="nav toggle">
+                            <a href="#/" id="menu_toggle"><i class="fa fa-bars"></i></a>
+                        </div>
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li >
+                                <a href="#">
+                                    <i class="fa fa-clock-o"></i> <span  id="temps"></span>
+                                </a>
+                                
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+            
+            <div class="right_col" role="main">
+
+                <div class="">
+                    <div class="page-title">
+                        <div class="title_left">
+                            <h3 id="titre">Gestion de base de donneé</h3>
+                            <br>
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <div class="row">
+
+					<div id="Acceuil" class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2 class="text text-primary">Bienvenu</h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                        
+                                    </li>
+                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+
+                                <div class="bs-example" data-example-id="simple-jumbotron">
+                                    <div class="jumbotron">
+                                        <h1 >Gestion des données de base</h1>
+                                        <p>Les données de base se sont les données qui présentent les différentes parties qui constituent <span class="text text-danger">l'établissement</span> tel que <span class="text text-danger">service</span> , <span class="text text-danger">département</span> , <span class="text text-danger">salle</span> est <span class="text text-danger">laboratoire Bureaux</span>. Le responsable de gestion des de base doit pouvoir gérer ces élément e lui donnant la possibilité <span class="text text-danger">d'ajouter supprimer, ou de modifier ces informations.</span> L'initialisation de ces données de bases est la première étape avant de pouvoir manipuler les différents modules de l'application. </p>
+                                    	
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                        <div id="form" class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="x_panel">
+                                <div class="x_title">
+                                    <h2 class="text text-primary text-capitalize" id="nomForm"></h2>
+                                    <ul class="nav navbar-right panel_toolbox">
+                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                        </li>
+                                        <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                        </li>
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div id="form_content" class="x_content">
+                                	
+                                </div>
+
+
+                                </div>
+                            </div>
+						
+									
+                        <div id="list" class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="x_panel">
+                                <div class="x_title">
+                                    <h2 class="text text-primary text-capitalize" id="listeNom"></h2>
+                                    <ul class="nav navbar-right panel_toolbox">
+                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                        </li>
+                                        <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                        </li>
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div id="tab_content" class="x_content">
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <br />
+                <br />
+                <br />
+            <footer class="footer">
+                <div>
+                    <p>Gestion de Base de donneé by <a>Rami Sfari</a>. |
+                        <span class="lead"> <i class="fa fa-graduation-cap"></i> ISET SOUSSE</span>
+                    </p>
+                </div>
+            </footer>
+                
+            </div>
+        </div>
+
+    </div>
+	
+	<!-- Jquery -->
+    <script src="Style/js/jquery/jquery.min.js"></script>
+    <!-- progressbar -->
+    <script src="Style/js/progressbar/nprogress.js"></script>
+    <!-- BootStrap -->
+    <script src="Style/js/bootstrap/bootstrap.min.js"></script>
+    <!-- Menu -->
+    <script src="Style/js/menu/menu.min.js"></script>
+    <!-- PNotify -->
+    <script type="text/javascript" src="Style/js/notify/pnotify.core.js"></script>
+    <script type="text/javascript" src="Style/js/notify/pnotify.buttons.js"></script>
+    <!-- Datatables -->
+    <script src="Style/js/datatables/jquery.dataTables.js"></script>
+    <script src="Style/js/datatables/dataTables.tableTools.js"></script>
+    <script src="Style/js/datatables/jquery.dataTables.nightly.js"></script>
+    <!-- bootstrap Validator -->
+    <script src="Style/js/validator/js/bootstrapValidator.js"></script>
+    <script src="Style/js/validator/js/language/be_FR.js "></script>
+    <!-- progressbar -->
+    <script src="Style/js/progressbar/nprogress.js"></script>
+    <!-- jquery confirm -->
+     <script src="Style/js/jquery confirm/jquery-confirm.min.js"></script>
+    <!-- list des service -->
+	<script src="Style/js/mon js/mainEtablissement.js"></script>
+	<script src="Style/js/mon js/mainBureaux.js"></script>
+	<script src="Style/js/mon js/mainDepartment.js"></script>
+	<script src="Style/js/mon js/mainLabos.js"></script>
+	<script src="Style/js/mon js/mainSalles.js"></script>
+	<script src="Style/js/mon js/mainService.js"></script>
+	<!-- initialisation -->
+	<script type="text/javascript">
+	$("#form").hide();
+    $("#list").hide();
+    $(".DTTT_container").hide();
+	$(document).ready(function () {
+	
+		setInterval(getTime(), 100);
+		
+		function getTime()
+	    {
+	        var jour=new Date();
+	        var h=jour.getHours();
+	        var m=jour.getMinutes();
+	        var s=jour.getSeconds();
+	        
+	        m=verifTemps(m);
+	        s=verifTemps(s);
+	        $("#temps").empty().append(h+":"+m+":"+s);
+	        t=setTimeout(function(){getTime()},500);
+	    }
+
+	    function verifTemps(i)
+	    {
+	        if (i<10)
+	        {
+	            i="0" + i;
+	        }
+	        return i;
+	    }
+	    $('#AcceuilMenu').click(function() {
+	    	NProgress.start();
+	    	$("#form").hide();
+	    	$("#Acceuil").show();
+	        $("#list").hide();
+	    	NProgress.done();
+	    });
+
+    });
+	
+	</script>
+</body>
+
+</html>
